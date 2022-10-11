@@ -1,1 +1,2 @@
-#Hritu Toma README
+# SP-Hritu Toma
+Repository for SP homework
