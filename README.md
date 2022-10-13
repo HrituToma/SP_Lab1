@@ -1,2 +1,2 @@
-# TW-Project
-Car auction web app using Flask
+# SP-Labs
+Repository for SP homework
