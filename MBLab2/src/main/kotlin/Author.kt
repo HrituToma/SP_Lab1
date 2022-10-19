@@ -1,0 +1,1 @@
+class Author(private val authorName: String) {}
