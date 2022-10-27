@@ -2,6 +2,6 @@ class Author(s: String) {
     var name = s
 
     fun print() {
-        println(name)
+        println("Author: $name")
     }
 }

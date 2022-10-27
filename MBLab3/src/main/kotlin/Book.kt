@@ -13,12 +13,9 @@ class Book(Booktitle: String) : Section(Booktitle) {
     }
 
     override fun print() {
-        println("Book: $bt")
-        println("Authors: ")
-        for(author in authors) {
-            print("Author: ")
-            author.print()
-            println()
+        for(a in authors) {
+            println("Authors:")
+            a.print()
         }
         super.print()
     }
