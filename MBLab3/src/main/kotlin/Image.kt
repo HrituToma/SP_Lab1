@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit
+
 class Image(url: String) : Element {
 
     var u = url
