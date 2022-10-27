@@ -1,6 +1,6 @@
 import java.util.concurrent.TimeUnit
 
-class Image(url: String) : Element {
+class Image(url: String)  : Element {
 
     var u = url
     override fun add(e: Element) {}
