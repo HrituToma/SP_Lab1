@@ -1,3 +1,7 @@
+package models
+
+import Visitee
+
 open class Section(title: String) : Element {
 
     var t = title
@@ -11,6 +15,10 @@ open class Section(title: String) : Element {
 
     override fun get(index: Int) {}
 
+    fun getTitle(): String {
+        return t
+    }
+
     override  fun print() {
         println(t)
         for(el in elements) {
@@ -18,5 +26,11 @@ open class Section(title: String) : Element {
         }
     }
 
+    override fun accept(v: Visitor) {
+        v.visitSection(this)
+        for(e in elements)  {
+            e.accept(v)
+        }
+    }
 
 }

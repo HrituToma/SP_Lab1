@@ -1,3 +1,5 @@
+package models
+
 open class ImageProxy(url: String): Element, Picture {
 
     val image = Image(url)
@@ -20,5 +22,8 @@ open class ImageProxy(url: String): Element, Picture {
 
     fun loadImage() {}
 
+    override fun accept(v: Visitor) {
+        v.visitImageProxy(this)
+    }
 
 }

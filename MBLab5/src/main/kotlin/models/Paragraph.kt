@@ -1,3 +1,8 @@
+package models
+
+import Visitee
+import services.AlignStrategy
+
 class Paragraph(paragraph: String) : Element {
 
     var p = paragraph
@@ -20,6 +25,10 @@ class Paragraph(paragraph: String) : Element {
         } else {
             alignStrategy!!.render(p)
         }
+    }
+
+    override fun accept(v: Visitor) {
+        v.visitParagraph(this)
     }
 
 }

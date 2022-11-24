@@ -1,4 +1,4 @@
-
+package models
 
 class Book(Booktitle: String) : Section(Booktitle) {
 

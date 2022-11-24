@@ -1,0 +1,33 @@
+
+object Main {
+    fun main(args: Array<String>) {
+        val sub_comanda = SubComanda("Marea Comanda")
+        val pizza = Pizza("Piza1", "R1", 21.0)
+        val paste = Paste("Fabreze", "R2", 16.0)
+        val salata = Salata("Coleslaw", "KFC", 43.0)
+        sub_comanda.add(pizza)
+        sub_comanda.add(salata)
+        println("Salata adaugata :")
+        salata.print()
+        println()
+        val stats = ComandaStatistics()
+        sub_comanda.accept(stats)
+        println()
+        sub_comanda.print()
+        stats.getStats()
+        println()
+        sub_comanda.add(paste)
+        sub_comanda.print()
+        println()
+        val stats2 = ComandaStats()
+        sub_comanda.accept(stats2)
+        stats2.getStats()
+        println()
+        sub_comanda.remove(pizza)
+        sub_comanda.print()
+        println()
+        val stats3 = ComandaStats()
+        sub_comanda.accept(stats3)
+        stats3.getStats()
+    }
+}

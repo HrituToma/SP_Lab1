@@ -1,3 +1,5 @@
+package models
+
 interface Element {
 
     fun add(e: Element) {}
@@ -5,6 +7,8 @@ interface Element {
     fun remove(e: Element) {}
 
     fun get(index: Int) {}
+
+    fun accept(v: Visitor) {}
 
     fun print() {}
 

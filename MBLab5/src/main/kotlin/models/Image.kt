@@ -1,5 +1,11 @@
+package models
+
+import Visitee
+import services.ImageLoaderFactory
+
 open class Image(url: String) : Element, Picture {
 
+    val imageLoader = ImageLoaderFactory()
 
     var u = url
 
@@ -22,6 +28,11 @@ open class Image(url: String) : Element, Picture {
     fun loadImage() {}
 
     override fun print() {
-        println("Image with name: $u")
+        println("models.Image with name: $u")
     }
+
+    override fun accept(v: Visitor) {
+        v.visitImage(this)
+    }
+
 }
